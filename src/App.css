@@ -1,38 +1,275 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  user-select: none;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.generalBox {
+  margin: auto;
+  width: 80%;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+li {
+  list-style-type: none;
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+.x {
+  width: 500px;
+}
+.imgIcon {
+  width: 18%;
+}
+.bookButton {
+  background-color: #fd5b2a;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.7s;
+  cursor: pointer;
+  border-radius: 7px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.bookButton:hover {
+  background-color: green;
+  color: white;
+}
+body {
+  background-color: #361765;
+  color: #fd5b2a;
+}
+h1 {
+  text-align: center;
+  margin-top: 15px;
+}
+h2 {
+  margin-left: 2%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+h3 {
+  margin-top: 30px;
+  margin-bottom: 15px;
+}
+.selectRoomUL {
+  display: flex;
+  justify-content: space-around;
+}
+.selectRoomLI {
+  border-radius: 20px;
+}
+.selectRoomLI:hover {
+  opacity: 1;
+}
+.dataBox {
+  padding: 15px;
+  color: aliceblue;
+}
+label {
+  color: beige;
+}
+.box {
+  margin-bottom: 20px;
+  margin-top: 25px;
+}
+.inpTime {
+  border-radius: 5px;
+  margin-left: 5px;
+}
+.inpSearch {
+  width: 40%;
+  box-sizing: border-box;
+  padding: 3px;
+  border-style: none;
+  border-radius: 3px;
+}
+.imgRooms {
+  width: 240px;
+  height: 220px;
+  border-radius: 25px;
+  cursor: pointer;
+}
+.imgRooms:hover {
+  transform: scale(1.1);
+  transition: 1s ease;
+}
+.true {
+  opacity: 1;
+  z-index: 1;
+}
+.false {
+  opacity: 0.5;
+  filter: blur(2px);
+  -webkit-transition: 1s;
+}
+
+.reserveDate {
+  border-radius: 20px;
+  border: 1px solid #fd5b2a;
+  width: 40%;
+}
+.bookingsBox {
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  text-align: center;
+  border-radius: 20px;
+  border: 1px solid #fd5b2a;
+  width: 50%;
+}
+.box2 {
+  width: 95%;
+  margin: auto;
+  display: flex;
+  margin-top: 25px;
+  justify-content: space-between;
+}
+@keyframes slideInFromBottom {
+  0% {
+    transform: translateY(50%);
+    opacity: 0;
   }
-  to {
-    transform: rotate(360deg);
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.slideInFromBottom {
+  animation: slideInFromBottom 0.8s ease-out forwards;
+}
+
+.hidden {
+  display: none;
+}
+.users {
+  border-radius: 7px;
+  padding: 10px;
+  margin-top: 7px;
+  width: 60%;
+}
+.user {
+  margin-top: 5px;
+  padding-bottom: 8px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #fd5b2a;
+}
+.bookings {
+  width: 300px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.bookUsers {
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+  word-wrap: break-word;
+}
+.bookTime {
+  color: white;
+}
+#remove {
+  background-color: #78e1ff;
+  border: none;
+  color: white;
+  width: 23px;
+  padding: 5px;
+  margin-left: 10px;
+  font-size: 12px;
+  transition-duration: 0.7s;
+  cursor: pointer;
+  border-radius: 7px;
+}
+#remove:hover {
+  background-color: red;
+}
+.filteredNamesList {
+  margin-top: 15px;
+  width: 270px;
+  cursor: pointer;
+}
+.filteredNamesList :hover {
+  border-radius: 7px;
+  padding: 5px;
+  border: 1px solid #fd5b2a;
+}
+
+input[type="time"] {
+  border: 1px solid #ccc;
+  font-size: 16px;
+}
+
+input[type="time"]:focus {
+  border-color: #007bff;
+}
+
+::-webkit-calendar-picker-indicator {
+  filter: invert(40%) sepia(40%) saturate(800%) hue-rotate(150deg);
+  cursor: pointer;
+}
+.slideButton {
+  z-index: 2;
+}
+.buttSlide {
+  display: none;
+}
+.buttSlide button {
+  height: 50px;
+  width: 50px;
+  font-size: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-style: none;
+  background-color: #fd5b2a;
+  color: white;
+  margin-top: 20%;
+  border-radius: 50%;
+}
+
+@media (min-width: 375px) and (max-width: 1024px) {
+  .generalBox {
+    width: 100%;
+  }
+  .buttSlide {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .reserveDate {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+  .box2 {
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+  }
+
+  .bookingsBox {
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .selectRoomUL {
+    flex-wrap: wrap;
+    column-gap: 10px;
+    position: relative;
+    margin-bottom: 28%;
+  }
+  .imgIcon {
+    display: none;
+  }
+  h2 {
+    text-align: center;
+  }
+
+  .selectRoomLI {
+    position: absolute;
   }
 }
