@@ -1,11 +1,14 @@
 import React from "react";
-import RoomSelection from "./RoomSelection";
-const Admin = ({ rooms }) => {
+
+const Admin = ({ rooms, date, startTime, endTime }) => {
   return (
     <div>
       <h1>Admin</h1>
-      <RoomSelection />
-      {console.log(rooms)}
+
+      <div>Date: {date}</div>
+      <div>Rooms: {rooms}</div>
+      <div>Start Time: {startTime}</div>
+      <div>End Time: {endTime}</div>
     </div>
   );
 };

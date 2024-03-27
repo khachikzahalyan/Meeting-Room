@@ -3,6 +3,7 @@
   padding: 0;
   user-select: none;
 }
+
 .generalBox {
   margin: auto;
   width: 80%;
@@ -284,7 +285,7 @@ input[type="time"]:focus {
 /* ------------------------------------------------------------- */
 
 .center {
-  max-width: 40%;
+  max-width: 100%;
   width: 100%;
   position: absolute;
   top: 40%;
@@ -296,7 +297,7 @@ input[type="time"]:focus {
   column-gap: 10px;
 }
 .MeetingPage {
-  width: 25%;
+  max-width: 40%;
   cursor: pointer;
   text-align: center;
   background-color: #fd5b2a;
@@ -308,7 +309,7 @@ input[type="time"]:focus {
 }
 .LoginPage {
   cursor: pointer;
-  width: 25%;
+  max-width: 25%;
   text-align: center;
   background-color: #fd5b2a;
   color: #361765;
@@ -320,7 +321,6 @@ input[type="time"]:focus {
 /* ------------------------------------------------------------------ */
 
 .generalLoginPage {
-  width: 20%;
   text-align: center;
   position: absolute;
   top: 30%;
@@ -333,15 +333,30 @@ input[type="time"]:focus {
   background-color: #fd5b2a;
   color: #361765;
   z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 10px;
 }
 .generalLoginPage h1 {
   margin-bottom: 15px;
 }
 
-.loginPageInput {
-  margin: auto;
-  width: 60%;
+.generalLoginPage button {
+  background-color: #361765;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.7s;
+  cursor: pointer;
+  border-radius: 7px;
 }
-.loginPageInput label {
-  color: #361765;
+.generalLoginPage button:hover {
+  background-color: green;
 }

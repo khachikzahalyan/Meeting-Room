@@ -84,7 +84,9 @@ function BookingForm({
           <button onClick={handleBooking} className="bookButton">
             Book
           </button>
-          {error && <p style={{ color: "red" }}>{error}</p>}
+          {error && (
+            <p style={{ color: "red", textAlign: "center" }}>{error}</p>
+          )}
         </div>
       )}
     </div>

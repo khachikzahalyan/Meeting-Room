@@ -5,7 +5,7 @@ import RoomBookings from "./RoomBookings";
 import RoomSelection from "./RoomSelection";
 import "./App.css";
 
-function Meeting() {
+export function Meeting() {
   const [rooms, setRooms] = useState(Array.from({ length: 5 }, () => []));
   const [date, setDate] = useState("");
   const [startTime, setStartTime] = useState("");
@@ -162,7 +162,7 @@ function Meeting() {
         alt="Telcell logo"
       />
 
-      <h2>Select Room:</h2>
+      <h2>Select Room</h2>
       <RoomSelection
         rooms={rooms}
         selectedRoomIndex={selectedRoomIndex}

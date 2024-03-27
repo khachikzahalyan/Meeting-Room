@@ -32,7 +32,7 @@ function Login({ selectedRoom, rooms, isPastTime }) {
       <h1>Login</h1>
       {error && <div style={{ color: "red" }}>{error}</div>}
       <div className="loginPageInput">
-        <label>Username:</label>
+        <p>Username:</p>
         <input
           type="text"
           value={username}
@@ -40,7 +40,7 @@ function Login({ selectedRoom, rooms, isPastTime }) {
         />
       </div>
       <div className="loginPageInput">
-        <label>Password:</label>
+        <p>Password: </p>
         <input
           type="password"
           value={password}
